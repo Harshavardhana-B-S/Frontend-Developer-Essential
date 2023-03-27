@@ -1,5 +1,5 @@
 # Frontend-Developer-Essential
-To beign with,here is usecase of OrderedList.
+To beign with,here is usecase of OrderedList and unordered list.
 
 Chapter Summary
 Use the HTML <ol> element to define an ordered list
