@@ -3,44 +3,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
     <title>Form</title>
 
-    <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
-        div{
-            border: 2px solid black;
-           padding: 10;
-        }
-       
-       
-    </style>
 </head>
 <body>
-    <div>
+    <div class="userForm">
         <h1>User Registration Form</h1>
     <form >
-        <label for="fname" >Name: </label>
-        <input type="text" id="fname" name="fname"><br><br>
+        <label for="fname" class="inLabel">Name: </label><br>
+        <input type="text" id="fname" name="fname" placeholder="Enter your Name" class="inBar"><br>
 
-        <label for="email">Email: </label>
-        <input type="email" id="email" name="email"><br><br>
+        <label for="email" class="inLabel">Email: </label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" class="inBar"><br>
 
-        <label for="passwd">PassWord: </label>
-        <input type="password" id="passwd" name="passwd"><br><br>
+        <label for="passwd" class="inLabel">PassWord: </label><br>
+        <input type="password" id="passwd" name="passwd" placeholder="Set PassWord" class="inBar"><br>
 
-        <label for="conPass">Confirm PassWord: </label>
-        <input type="password" id="conPass" name="conPass"><br><br>
+        <label for="conPass" class="inLabel">Confirm PassWord: </label><br>
+        <input type="password" id="conPass" name="conPass"placeholder="Confirm Password" class="inBar"><br>
 
-        <label for="birthday">Birthday: </label>
-        <input type="date" id="birthday" name="birthday"><br><br>
+        <label for="birthday" class="inLabel">Birthday: </label> <br>
+        <input type="date" id="birthday" name="birthday" class="inBar"><br>
 
-        <label for="gender">Gender: </label><br>
-        <input type="radio" id="html">
+        <label for="gender"  class="inLabel">Gender: </label><br>
+        <input type="radio" id="html" >
         <label for="html">Male</label><br>
 
         <input type="radio" id="html">
@@ -49,7 +37,7 @@
         <input type="radio" id="html">
         <label for="html">Other</label><br><br>
 
-        <label for="gender">Interest: </label><br>
+        <label for="interest" id="interest">Interest: </label><br>
         <input type="checkbox" id="hobb1">
         <label for="hobb1">Music</label><br>
         <input type="checkbox" id="hobb2">
@@ -58,8 +46,8 @@
         <input type="checkbox" id="hobb3">
         <label for="hobb3">Reading</label><br><br>
 
-        <input type="reset" value="Reset">
-        <input type="submit" value="Submit">
+        <input type="reset" value="Reset" class="button">
+        <input type="submit" value="Submit" class="button">
     </form>
 
 </div>
