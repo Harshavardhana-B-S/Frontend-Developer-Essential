@@ -226,6 +226,11 @@
     display: flex;
 }
 
+#githubLogo{
+    background-color: #111;
+    outline: none;
+    border: none;    
+}
 .skillsLogo{
     /* border: 1px solid #333333; */
     width: 100px;
@@ -237,11 +242,12 @@
 .skillsLogo img{
     width: 100%;
     outline: none;
+    border: none;
     transition: all .2s;
 }
 
 .skillsLogo img:hover{
-    width: 120%;
+    width: 105%;
 }
 
 .projectConatiner{
