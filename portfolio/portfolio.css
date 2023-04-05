@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+
 .landingPage{
     display: flex;
     background-color: white;
@@ -18,8 +19,8 @@
 
 
     position: fixed;
-  top: 0;
-  width: 100%;
+    top: 0;
+    width: 100%;
 }
 
 .navLName{
@@ -148,7 +149,7 @@
     /* border: 1px solid red; */
     width: 100%;
     height: 98vh;
-    background-color: rgb(245, 245, 245);
+    background-color: white;
     display: flex;
     flex-direction: column;
    /* justify-content: center; */
@@ -236,4 +237,83 @@
 
 .skillsLogo img:hover{
     width: 120%;
+}
+
+.projectConatiner{
+    /* border: 1px solid red; */
+    width: 80%;
+    height: 98vh;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectConatiner h1{
+    margin-top: 110px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #333333;
+    text-align: center;
+}
+
+.projectBox{
+    /* border: 1px solid blueviolet; */
+    width: 100%;
+    height: 70vh;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+}
+
+.projectImage{
+     /* border: 1px solid #333333; */
+     width: 356px;
+     height: 300px;
+     margin: 0 auto;
+     border-radius: 5px;
+     box-shadow:0 4px 8px 0 rgba(0,0,0,0.2) ;
+     display: flex;
+     flex-direction: column;
+     transition-duration: 0.3s;
+}
+
+.projectImage:hover{
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.projectImage img{
+    width: 100%; 
+    border-radius: 5px;  
+}
+
+.projectImage h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #333333;
+}
+
+.projectImage p{
+    text-align: center;
+   font-size: 20px;
+   font-family: 'Source Sans Pro', sans-serif;
+   font-weight:300;
+   color: #333333;
+}
+
+.projectImage a{
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    width: 25%;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    color: rgb(235, 113, 0);
+    margin: 0 auto;
+    margin-top: 5px; 
 }
