@@ -30,15 +30,20 @@
     /* margin-left: 50px; */
 }
 
-.navLName h3{
+.navLName a{
+    outline: none;
+    text-decoration: none;
+}
+
+.navLName a h3{
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 25px;
     font-family: 'Source Sans Pro', sans-serif;
-    color: rgb(235, 113, 0);
-    
+    /* color: rgb(235, 113, 0); */
+    color: #111;
     transition: all 1s;
 }
 
@@ -316,4 +321,42 @@
     color: rgb(235, 113, 0);
     margin: 0 auto;
     margin-top: 5px; 
+}
+
+.letsConnect{
+    /* border: 1px solid blue; */
+    background-color: black;
+    width: 100%;
+    height: 20%;
+    margin-top: -145px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ .connectHeading{ 
+    /* border: 1px solid blue; */
+    width: 20%;
+} 
+.connectHeading h3{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: white;
+    text-align: center;
+    /* margin-top: 35px; */
+}
+
+.connectSocial{
+   /* border: 1px solid blue; */
+    width: 20%;
+    margin-left: 50px;
+}
+
+.connectSocial a{
+    margin: 10px;
+}
+.connectSocial a img{
+    width: 2rem;
 }
