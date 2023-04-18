@@ -15,7 +15,7 @@
   <body>
     <header class="navBar">
       <i class="fa fa-bars" id="menuBar"></i>
-      <img src="assests/logo.png" alt="" />
+      <img src="logo.png" alt="" />
       <h4>Keep</h4>
     </header>
 
@@ -24,13 +24,8 @@
         <div class="sideMenu">
           <ul class="sideUL">
             <li><i class="fa fas fa-edit" id="noteLogo"></i></li>
-            <li>
-              <i
-                class="fa fa-trash-o"
-                style="font-size: 25px; color: #5f6368"
-                id="trashLogo"
-              ></i>
-            </li>
+            <li><i class="fa fa-trash-o" style="font-size: 25px; color: #5f6368" id="trashLogo"></i></li>
+            <li><i class="fa fa-archive" style="font-size:25px;color: #5f6368" id="archiveLogo"></i></li>
           </ul>
         </div>
 
@@ -38,6 +33,7 @@
           <ul class="sideUL2">
             <li><span class="logoName">Notes</span></li>
             <li><span class="logoName">Trash</span></li>
+            <li><span class="logoName">Archive</span></li>
           </ul>
         </div>
       </div>
@@ -57,15 +53,22 @@
           <button class="noteBtn" id="adddBtn">Add Note</button>
         </section>
 
-        <div id="showData">
-          <!-- <div class="displayConatiner">
-         <div class="displayBox">
+      <div id="showData">
+        <!-- <div class="displayConatiner">
+
+          <div class="displayBox">
            <p> Title </p>
-           <span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, minus.</span>
-         </div>
-         <button class="deleteNote">-</button>
-         </div>  -->
-        </div>
+           <span> Lorem ipsum dolor sit </span>
+          </div>
+
+          <div class="delArch">
+           <button class="deleteNote">-</button>
+           <span><i class="fa fa-archive" style="font-size:25px;color: #5f6368"></i></span>
+          </div>
+    
+        </div> -->
+
+      </div>
 
       </div>
     </div>
@@ -78,9 +81,23 @@
          <p> Title </p>
          <span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, minus.</span>
        </div>
-       <button class="deleteNote">-</button>
+       <button class="deleteNote" >-</button>
        </div>  -->
     </div>
+
+
+      <!------ Archieve Feature Code----->
+      <div class="archiveConatiner" id="archiveBox">
+        <!-- <div class="displayConatiner">
+       <div class="displayBox">
+         <p> Title </p>
+         <span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, minus.</span>
+       </div>
+       </div>  -->
+    </div>
+
+
+
 
     <script src="./index.js"></script>
 

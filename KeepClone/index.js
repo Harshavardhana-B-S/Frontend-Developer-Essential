@@ -3,10 +3,12 @@ let toggle_bar= document.querySelector(".navBar");
 let sidebar = document.querySelector(".sideMenu2");
 let noteLogo=document.getElementById("noteLogo");
 let trashLogo =document.getElementById("trashLogo");
+let archiveLogo=document.getElementById("archiveLogo");
 let showData= document.getElementById("showData");
 
 let inputBox=document.getElementById("inputBox");
 let trashBox=document.getElementById("trashBox");
+let archiveBox=document.getElementById("archiveBox");
 
 toggle_bar.addEventListener("click",()=>{
     if(toggle_bar.firstElementChild.classList.contains("fa-bars"))
@@ -25,12 +27,20 @@ toggle_bar.addEventListener("click",()=>{
 /*----- click on side Logo----*/
 
 noteLogo.addEventListener("click",()=>{
-  trashBox.style.display="none";
   inputBox.style.display="block";
+  trashBox.style.display="none";
+  archiveBox.style.display="none";
 })
  
 trashLogo.addEventListener("click",()=>{
   trashBox.style.display="flex";
+  inputBox.style.display="none";
+  archiveBox.style.display="none";
+})
+
+archiveLogo.addEventListener("click",()=>{
+  archiveBox.style.display="flex";
+  trashBox.style.display="none";
   inputBox.style.display="none";
 })
 
@@ -44,6 +54,8 @@ const container = document.querySelector("#showData");
 const note = localStorage.getItem("notes")? JSON.parse(localStorage.getItem("notes")):[];
 
 const trash=localStorage.getItem("note2")? JSON.parse(localStorage.getItem("note2")):[];
+
+const archive=localStorage.getItem("notes3")?JSON.parse(localStorage.getItem("notes3")):[];
 
 
 
@@ -70,9 +82,32 @@ function displayItem() {
     span.innerText = x.des;
     innerDiv.append(span);
 
+    let innerDiv2=document.createElement("div");
+    innerDiv2.setAttribute("class","delArch");
+
+
     let btn = document.createElement("button");
     btn.setAttribute("class", "deleteNote");
     btn.innerText = "-";
+    innerDiv2.append(btn);
+
+    let span2 = document.createElement("span");
+    span2.innerHTML=`<i class="fa fa-archive" style="font-size:25px;color: #5f6368"></i>`;
+    innerDiv2.append(span2);
+
+
+    span2.addEventListener("click",()=>{
+      archive.unshift(note[index]);
+      localStorage.setItem("notes3",JSON.stringify(archive));
+      archiveDisplay();
+
+      note.splice(index,1);
+      localStorage.setItem("notes", JSON.stringify(note));
+      displayItem();
+
+    })
+
+
 
     //to delete a particular note 
     btn.addEventListener("click",()=>{
@@ -85,7 +120,7 @@ function displayItem() {
         localStorage.setItem("notes", JSON.stringify(note));
         displayItem();
     })
-    outerDiv.append(btn);
+    outerDiv.append(innerDiv2);
     container.append(outerDiv);
   });
 
@@ -145,6 +180,35 @@ function trashDisplay() {
 
   })    
 }
+/*--- Trash Feature-- END -*/
+
+
+/*--- Archive Feature---*/
+const archContainer= document.querySelector("#archiveBox");
+archiveDisplay();
+function archiveDisplay() {
+  archContainer.innerHTML='';
+ 
+   archive.map((x,index)=>{
+     let outerDiv2 = document.createElement("div");
+     outerDiv2.setAttribute("class", "displayConatiner");
+ 
+     let innerDiv2 = document.createElement("div");
+     innerDiv2.setAttribute("class", "displayBox");
+     let p = document.createElement("p");
+     p.innerHTML = x.title;
+     innerDiv2.append(p);
+ 
+     let span = document.createElement("span");
+     span.innerText = x.des;
+     innerDiv2.append(span);
+ 
+     outerDiv2.append(innerDiv2);
+     archContainer.append(outerDiv2);
+ 
+   })    
+};
+
 
 
 
