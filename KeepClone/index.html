@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <title>Google Keep</title>
+  </head>
+  <body>
+    <header class="navBar">
+      <i class="fa fa-bars" id="menuBar"></i>
+      <img src="assests/logo.png" alt="" />
+      <h4>Keep</h4>
+    </header>
+
+    <div class="heroSection">
+      <div class="sideBar">
+        <div class="sideMenu">
+          <ul class="sideUL">
+            <li><i class="fa fas fa-edit" id="noteLogo"></i></li>
+            <li>
+              <i
+                class="fa fa-trash-o"
+                style="font-size: 25px; color: #5f6368"
+                id="trashLogo"
+              ></i>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sideMenu2">
+          <ul class="sideUL2">
+            <li><span class="logoName">Notes</span></li>
+            <li><span class="logoName">Trash</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mainArea" id="inputBox">
+        <section class="noteConatiner">
+          <div class="noteBox">
+            <input type="text" placeholder="Title" id="title" />
+            <textarea
+              id="textArea"
+              placeholder="Take a note.."
+              id=""
+              cols="30"
+              rows="3"
+            ></textarea>
+          </div>
+          <button class="noteBtn" id="adddBtn">Add Note</button>
+        </section>
+
+        <div id="showData">
+          <!-- <div class="displayConatiner">
+         <div class="displayBox">
+           <p> Title </p>
+           <span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, minus.</span>
+         </div>
+         <button class="deleteNote">-</button>
+         </div>  -->
+        </div>
+
+      </div>
+    </div>
+
+
+    <!------ Trash Feature Code----->
+    <div class="trashConatiner" id="trashBox">
+        <!-- <div class="displayConatiner">
+       <div class="displayBox">
+         <p> Title </p>
+         <span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, minus.</span>
+       </div>
+       <button class="deleteNote">-</button>
+       </div>  -->
+    </div>
+
+    <script src="./index.js"></script>
+
+  </body>
+</html>

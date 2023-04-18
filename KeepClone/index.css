@@ -1,0 +1,228 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.navBar{
+  background-color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1 !important;
+  box-shadow: 0px 4px 4px -6px; 
+}
+
+#menuBar{
+  font-size:25px;
+  color: #5f6368;
+  opacity: 1;
+}
+
+.navBar img{
+  margin-left: 10px;
+}
+
+.navBar h4{
+  font-family: "Product Sans",Arial,sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5f6368;
+  margin-left: 10px;
+  opacity: 1;
+}
+
+.heroSection{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sideBar{
+  /* border: 1px solid red; */
+  display: flex;
+  width: 200px;
+  height: 100vh;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.show_Bars {
+  transform: translate(0%) !important;
+}
+
+.sideMenu {
+position: fixed;
+left: 0;
+   background-color: white;
+   padding: 10px;
+  margin-top: 100px;
+  z-index: 1;
+}
+
+.sideMenu2{
+  padding: 10px;
+  margin-top:88px;
+  position: fixed;
+  transform: translate(-100%);
+  transition: all 0.3s linear 0s;
+}
+
+.sideUL li{
+  margin-top: 35px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  list-style-type: none;
+}
+
+.sideUL2 li{
+  margin-top: 35px;
+  margin-left: 20px;
+  margin-bottom: -10px;
+  list-style-type: none;
+}
+
+#noteLogo{
+  font-size: 25px;
+  color: #5f6368;
+  opacity: 1;
+}
+.logoName{
+  letter-spacing: .01785714em;
+  font-family: "Product Sans",Arial,sans-serif;
+  font-size: 15px;
+  color: #202124;
+  margin-left: 50px;
+}
+
+.mainArea{
+  /* border: 1px solid red; */
+  margin-top: 90px;
+  width: 1300px;
+  height: 87vh;
+}
+
+/* ---- Todo Area ----*/
+.noteConatiner {
+  /* border: 2px solid rgba(0, 0, 0, 0.7); */
+  border: none;
+  border-radius: 20px;
+  width: 40%;
+  height: 20vh;
+  margin: 0 auto;
+  margin-top: 50px;
+  /* padding: 5px; */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 4px black;
+}
+
+.noteBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.noteBox input {
+  /* border: 1px solid rgba(0, 0, 0, 0.7); */
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  /* margin-bottom: 10px; */
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.noteBox textarea {
+  /* border: 1px solid rgba(0, 0, 0, 0.7); */
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  outline: none;
+  /* margin-bottom: 10px; */
+}
+
+.noteBtn {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin: -30px auto;
+  width: 20%;
+  /* margin-bottom: -1000px; */
+  /* margin-bottom: 30px auto; */
+  /* border: 1px solid rgba(0, 0, 0, 0.7); */
+}
+
+.noteBtn:hover {
+  background-color: rgb(166, 162, 162);
+}
+
+/*---- Display Todo ---- */
+
+.displayConatiner {
+  border: 1px solid  rgba(0,0,0,0.5);
+  border-radius: 10px;
+  /* padding: 5px; */
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 213px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.displayBox p{
+  margin-top: -15px;
+  margin-left: 20px;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight:500;
+}
+
+span{
+  /* border: 1px solid red; */
+  margin-left: 20px;
+  line-height: 50px;
+  font-size: 17px;
+}
+
+.deleteNote {
+  /* float: right; */
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(221, 67, 98);
+  border: none;
+  margin-right: 20px;
+}
+
+#showData {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 98%;
+  height: 100%;
+}
+
+
+/*---- Trash Feature -----*/
+
+.trashConatiner{
+  /* border: 1px solid blue; */
+  width: 1260px;
+  height: 87vh;
+  position: absolute;
+  top: 100px;
+  left: 230px;
+  display: none;
+  flex-wrap: wrap;
+}
