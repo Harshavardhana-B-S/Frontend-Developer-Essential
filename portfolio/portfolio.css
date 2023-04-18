@@ -255,7 +255,7 @@
     width: 80%;
     height: 98vh;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: -123px;
     display: flex;
     flex-direction: column;
 }
