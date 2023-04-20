@@ -51,11 +51,11 @@ const des = document.getElementById("textArea");
 const addBtn = document.getElementById("adddBtn");
 const container = document.querySelector("#showData");
 
-const note = localStorage.getItem("notes")? JSON.parse(localStorage.getItem("notes")):[];
+const note = localStorage.getItem("addNote")? JSON.parse(localStorage.getItem("addNote")):[];
 
-const trash=localStorage.getItem("note2")? JSON.parse(localStorage.getItem("note2")):[];
+const trash=localStorage.getItem("trashNote")? JSON.parse(localStorage.getItem("trashNote")):[];
 
-const archive=localStorage.getItem("notes3")?JSON.parse(localStorage.getItem("notes3")):[];
+const archive=localStorage.getItem("archiveNote")?JSON.parse(localStorage.getItem("archiveNote")):[];
 
 
 
@@ -98,11 +98,11 @@ function displayItem() {
 
     span2.addEventListener("click",()=>{
       archive.unshift(note[index]);
-      localStorage.setItem("notes3",JSON.stringify(archive));
+      localStorage.setItem("archiveNote",JSON.stringify(archive));
       archiveDisplay();
 
       note.splice(index,1);
-      localStorage.setItem("notes", JSON.stringify(note));
+      localStorage.setItem("addNote", JSON.stringify(note));
       displayItem();
 
     })
@@ -112,12 +112,12 @@ function displayItem() {
     //to delete a particular note 
     btn.addEventListener("click",()=>{
        trash.unshift(note[index]);
-       localStorage.setItem("note2", JSON.stringify(trash));
+       localStorage.setItem("trashNote", JSON.stringify(trash));
        trashDisplay();
       //  console.log(trash);
         note.splice(index,1);
         // console.log(note);
-        localStorage.setItem("notes", JSON.stringify(note));
+        localStorage.setItem("addNote", JSON.stringify(note));
         displayItem();
     })
     outerDiv.append(innerDiv2);
@@ -136,7 +136,7 @@ addBtn.addEventListener("click",()=>{
     des: des.value,
   });
   // console.log(note);
-  localStorage.setItem("notes",JSON.stringify(note));
+  localStorage.setItem("addNote",JSON.stringify(note));
   displayItem();
 })
 
@@ -170,7 +170,7 @@ function trashDisplay() {
 
     btn2.addEventListener("click",()=>{
       trash.splice(index,1);
-      localStorage.setItem("note2",JSON.stringify(trash));
+      localStorage.setItem("trashNote",JSON.stringify(trash));
       trashDisplay()
     })
 
@@ -202,8 +202,19 @@ function archiveDisplay() {
      let span = document.createElement("span");
      span.innerText = x.des;
      innerDiv2.append(span);
+
+    let btn2 = document.createElement("button");
+    btn2.setAttribute("class", "deleteNote");
+    btn2.innerText = "-";
+
+    btn2.addEventListener("click",()=>{
+      archive.splice(index,1);
+      localStorage.setItem("archiveNote",JSON.stringify(archive));
+      archiveDisplay();
+    })
  
      outerDiv2.append(innerDiv2);
+     outerDiv2.append(btn2);
      archContainer.append(outerDiv2);
  
    })    

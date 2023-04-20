@@ -106,7 +106,7 @@ left: 0;
 
 /* ---- Todo Area ----*/
 .noteConatiner {
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  /* border: 1px solid rgba(0, 0, 0, 0.7); */
   /* border: none; */
   border-radius: 20px;
   width: 40%;
@@ -116,7 +116,7 @@ left: 0;
   /* padding: 5px; */
   display: flex;
   flex-direction: column;
-  /* box-shadow: 0 1px 4px black; */
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 .noteBox {
@@ -169,10 +169,8 @@ left: 0;
 .displayConatiner {
   border: 1px solid  rgba(0,0,0,0.5);
   border-radius: 10px;
-  /* padding: 5px; */
-  margin-top: 40px;
   margin-left: 20px;
-  width: 213px;
+  width: 220px;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -180,7 +178,7 @@ left: 0;
 }
 
 .displayBox p{
-  margin-top: -15px;
+  /* margin-top: -10px; */
   margin-left: 20px;
   font-family: sans-serif;
   font-size: 17px;
@@ -199,16 +197,17 @@ span{
   width: 30px;
   height: 30px;
   font-size: 1.6rem;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   background-color: rgb(221, 67, 98);
   border: none;
-  margin-top: 15px;
+  margin-right: 10px;
 }
 
 #showData {
   /* border: 1px solid red; */
+   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -216,8 +215,9 @@ span{
 }
 .delArch{
   /* border: 1px solid blue; */
+  margin-top: 13px;
   width: 25%;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-around; 
@@ -226,7 +226,7 @@ span{
 
 .delArch span{
   margin-bottom: 15px;
-  margin-right: 17px;
+  margin-right: 29px;
 
 }
 
@@ -253,4 +253,93 @@ span{
    left: 230px;
    display: none;
    flex-wrap: wrap;
+}
+
+.sideMenuu{
+  display: none;
+}
+
+
+/*----------Small Screen---*/
+@media only screen and (max-width: 600px) {
+
+  .sideBar{
+    width: 0;
+    height: 0;
+  }
+
+  .sideMenu {
+    position: fixed;
+    margin-top: -9px;
+    margin-left: 209px;
+    height: 0;
+    }
+
+  .sideUL{
+     display: flex;   
+  }
+  
+  .sideMenu2{
+    display: none;
+  }
+
+  #sideSmall{
+    width: 50%;
+    display: block;
+    margin-left: 70px;
+  }
+
+  #menuBar{
+    display: none;
+  }
+
+  .noteConatiner{
+    /* border: 1px solid black; */
+    width: 80%;
+  }
+
+  .noteBtn{
+    width: 76px;
+    margin-top: 0px;
+  }
+
+  .displayConatiner{
+    /* border: 1px solid blue; */
+    margin: 20 auto;
+    margin-bottom: 2px;
+  }
+  #showData{
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: 0 auto;
+   flex-direction: column;
+   flex-wrap: nowrap;
+  }
+
+
+  /*---- Trahs----*/
+  #trashBox{
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    margin: 20 auto;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  /*----archiveBox---*/
+  #archiveBox{
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+
 }
